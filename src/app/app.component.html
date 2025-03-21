@@ -1,0 +1,6 @@
+<h1>{{ message }} {{ userName }}</h1>
+<img [src]="logoUrl" alt="BridgeLabz Logo" width="200" (click)="openBridgeLabzSite()">
+<input type="text" [(ngModel)]="userName" (input)="validateName()" placeholder="Enter your name"> 
+
+<!-- Show Error if Validation Fails -->
+<p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
